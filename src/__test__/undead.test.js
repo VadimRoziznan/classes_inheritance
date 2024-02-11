@@ -1,11 +1,14 @@
 import Undead from "../js/class/undead";
 
 test('Object properties Undead', () => {
-  const response = new Undead('Нежить', 'Undead');
-  expect(response.name).toBe('Нежить');
-  expect(response.type).toBe('Undead');
-  expect(response.health).toBe(100);
-  expect(response.level).toBe(1);
-  expect(response.attack).toBe(25);
-  expect(response.defence).toBe(25);
+  const undead = new Undead('Нежить', 'Undead');
+  const correct = {
+    name: 'Нежить',
+    type: 'Undead',
+    health: 100,
+    level: 1,
+    attack: 25,
+    defence: 25,
+  }
+  expect(undead).toEqual(correct);
 });

@@ -1,12 +1,15 @@
 import Magician from "../js/class/magician";
 
 test('Object properties Magician', () => {
-  const response = new Magician('Гэндальф', 'Magician');
-  expect(response.name).toBe('Гэндальф');
-  expect(response.type).toBe('Magician');
-  expect(response.health).toBe(100);
-  expect(response.level).toBe(1);
-  expect(response.attack).toBe(10);
-  expect(response.defence).toBe(40);
+  const magician = new Magician('Гэндальф', 'Magician');
+  const correct = {
+    name: 'Гэндальф',
+    type: 'Magician',
+    health: 100,
+    level: 1,
+    attack: 10,
+    defence: 40,
+  }
+  expect(magician).toEqual(correct);
 });
 

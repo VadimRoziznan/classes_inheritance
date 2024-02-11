@@ -1,11 +1,14 @@
 import Daemon from "../js/class/daemon";
 
 test('Object properties Daemon', () => {
-  const response = new Daemon('Betrezen', 'Daemon');
-  expect(response.name).toBe('Betrezen');
-  expect(response.type).toBe('Daemon');
-  expect(response.health).toBe(100);
-  expect(response.level).toBe(1);
-  expect(response.attack).toBe(10);
-  expect(response.defence).toBe(40);
+  const daemon = new Daemon('Betrezen', 'Daemon');
+  const correct = {
+    name: 'Betrezen',
+    type: 'Daemon',
+    health: 100,
+    level: 1,
+    attack: 10,
+    defence: 40,
+  }
+  expect(daemon).toEqual(correct);
 });

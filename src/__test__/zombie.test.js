@@ -1,11 +1,14 @@
 import Zombie from "../js/class/zombie";
 
 test('Object properties Zombie', () => {
-  const response = new Zombie('Зомби', 'Zombie');
-  expect(response.name).toBe('Зомби');
-  expect(response.type).toBe('Zombie');
-  expect(response.health).toBe(100);
-  expect(response.level).toBe(1);
-  expect(response.attack).toBe(40);
-  expect(response.defence).toBe(10);
+  const zombie = new Zombie('Зомби', 'Zombie');
+  const correct = {
+    name: 'Зомби',
+    type: 'Zombie',
+    health: 100,
+    level: 1,
+    attack: 40,
+    defence: 10,
+  }
+  expect(zombie).toEqual(correct);
 });

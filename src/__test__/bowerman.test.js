@@ -1,11 +1,14 @@
 import Bowerman from "../js/class/bowerman";
 
 test('Object properties Bowerman', () => {
-  const response = new Bowerman('Ilon', 'Bowerman');
-  expect(response.name).toBe('Ilon');
-  expect(response.type).toBe('Bowerman');
-  expect(response.health).toBe(100);
-  expect(response.level).toBe(1);
-  expect(response.attack).toBe(25);
-  expect(response.defence).toBe(25);
+  const bowerman = new Bowerman('Ilon', 'Bowerman');
+  const correct = {
+    name: 'Ilon',
+    type: 'Bowerman',
+    health: 100,
+    level: 1,
+    attack: 25,
+    defence: 25,
+  }
+  expect(bowerman).toEqual(correct);
 });
