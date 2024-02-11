@@ -12,11 +12,11 @@ test('Object properties Character Error type', () => {
 });
 
 test('Object properties Character', () => {
-  const response = new Character('Somebody', 'Magician', 100, 1, 25, 25);
+  const response = new Character('Somebody', 'Magician');
   expect(response.name).toBe('Somebody');
   expect(response.type).toBe('Magician');
   expect(response.health).toBe(100);
   expect(response.level).toBe(1);
-  expect(response.attack).toBe(25);
-  expect(response.defence).toBe(25);
+  expect(response.attack).toBe(null);
+  expect(response.defence).toBe(null);
 });
